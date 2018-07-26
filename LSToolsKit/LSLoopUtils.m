@@ -8,17 +8,36 @@
 
 #import "LSLoopUtils.h"
 
-@interface LSLoopUtils ()
+typedef void(^BreakWithTimeOut)(void);
 
+@interface LSLoopUtils ()
+#pragma mark - timer
+//全局timer
 @property (nonatomic, strong)NSTimer *timer;
 
-@property (nonatomic, copy) BreakLoopBlock breakLoopBlock;
-
+#pragma mark - 循环条件
+///开始循环的时间
 @property (nonatomic, strong)NSDate *fireDate;
+///超时时间
+@property (nonatomic, strong) NSDate *timeOutDate;
+///外部要循环的对象
+@property (nonatomic, weak) id target;
+///外部要循环的方法
+@property (nonatomic, assign) SEL selecter;
+
+#pragma mark - 跳出循环回调
+///跳出循环回调
+@property (nonatomic, copy) BreakLoopBlock breakLoopBlock;
+///超时跳出循环回调
+@property (nonatomic, copy) BreakWithTimeOut breakWithTimeOut;
 
 @end
 
 @implementation LSLoopUtils
+
+-(void)dealloc{
+    NSLog(@"LoopUtils dealloc");
+}
 
 /**
  开启循环
@@ -35,30 +54,44 @@
 + (instancetype)loopWithTarget:(id)target sel:(SEL)selector interval:(NSTimeInterval)interval timeout:(NSTimeInterval)timeout startAfter:(NSTimeInterval)startAfter breakLoop:(BreakLoopBlock)breakLoopBlock breakWithTimeOut:(void(^)(void))breakWithTimeOut{
     LSLoopUtils *util = [[LSLoopUtils alloc] init];
     util.breakLoopBlock = breakLoopBlock;
+    util.breakWithTimeOut = breakWithTimeOut;
     
     NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:startAfter];
+    NSDate *timeOutDate = [fireDate dateByAddingTimeInterval:timeout];
+    
     util.fireDate = fireDate;
-    __weak __typeof(&*target) weakTarget = target;
-    __weak __typeof(&*util) weakUtil = util;
-    util.timer = [[NSTimer alloc] initWithFireDate:fireDate interval:interval repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSDate *timeOutDate = [weakUtil.fireDate dateByAddingTimeInterval:timeout];
-        NSDate *currentDate = [NSDate date];
-        NSComparisonResult result = [currentDate compare:timeOutDate];
-        if (result == NSOrderedDescending) {
-            if (breakWithTimeOut != nil) {
-                breakWithTimeOut();
-            }
-            [weakUtil releaseResourse];
-        }else{
-            @try{
-                [weakTarget performSelectorOnMainThread:selector withObject:nil waitUntilDone:NO];
-            }@catch(NSException *e){
-                NSLog(@"%@",e);
-            }
-        }
-    }];
+    util.timeOutDate = timeOutDate;
+    
+    util.target = target;
+    util.selecter = selector;
+    
+    util.timer = [[NSTimer alloc] initWithFireDate:fireDate interval:interval target:util selector:@selector(loopMethod) userInfo:nil repeats:YES];
+    
     [[NSRunLoop currentRunLoop] addTimer:util.timer forMode:NSRunLoopCommonModes];
     return util;
+}
+
+/**
+ 内部循环方法
+ */
+- (void)loopMethod{
+    if (self.target == nil){
+        [self releaseResourse];
+    }
+    NSDate *currentDate = [NSDate date];
+    NSComparisonResult result = [currentDate compare:self.timeOutDate];
+    if (result == NSOrderedDescending) {
+        if (self.breakWithTimeOut != nil) {
+            self.breakWithTimeOut();
+        }
+        [self releaseResourse];
+    }else{
+        @try{
+            [self.target performSelectorOnMainThread:self.selecter withObject:nil waitUntilDone:NO];
+        }@catch(NSException *e){
+            NSLog(@"%@",e);
+        }
+    }
 }
 
 /**
@@ -86,6 +119,8 @@
 - (void)releaseResourse{
     [self resetTimer];
     self.fireDate = nil;
+    self.timeOutDate = nil;
+    self.breakWithTimeOut = nil;
     self.breakLoopBlock = nil;
 }
 

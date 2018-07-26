@@ -44,4 +44,9 @@ typedef void(^BreakLoopBlock)(NSDictionary *userInfo);
  */
 - (void)endLoopWithUserInfo:(NSDictionary *)userInfo;
 
+/**
+ 释放资源(在一个循环还没结束，又需要重置循环的，需要调用此方法，再进行创建Loop方法)
+ */
+- (void)releaseResourse;
+
 @end

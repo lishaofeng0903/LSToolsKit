@@ -18,6 +18,8 @@
 		D7500264209C028A005E823D /* LSToolsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D750025C209C028A005E823D /* LSToolsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D750026B209C06F7005E823D /* LSLoopUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D7500269209C06F7005E823D /* LSLoopUtils.h */; };
 		D750026C209C06F7005E823D /* LSLoopUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D750026A209C06F7005E823D /* LSLoopUtils.m */; };
+		D7D2B5E92109BC5C0060548E /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2B5E72109BC5C0060548E /* ViewController2.m */; };
+		D7D2B5EA2109BC5C0060548E /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D2B5E82109BC5C0060548E /* ViewController2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		D750025F209C028A005E823D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7500269209C06F7005E823D /* LSLoopUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLoopUtils.h; sourceTree = "<group>"; };
 		D750026A209C06F7005E823D /* LSLoopUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLoopUtils.m; sourceTree = "<group>"; };
+		D7D2B5E62109BC5C0060548E /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		D7D2B5E72109BC5C0060548E /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		D7D2B5E82109BC5C0060548E /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +111,9 @@
 				D7500242209C0255005E823D /* AppDelegate.m */,
 				D7500244209C0255005E823D /* ViewController.h */,
 				D7500245209C0255005E823D /* ViewController.m */,
+				D7D2B5E62109BC5C0060548E /* ViewController2.h */,
+				D7D2B5E72109BC5C0060548E /* ViewController2.m */,
+				D7D2B5E82109BC5C0060548E /* ViewController2.xib */,
 				D7500247209C0255005E823D /* Main.storyboard */,
 				D750024A209C0255005E823D /* Assets.xcassets */,
 				D750024C209C0255005E823D /* LaunchScreen.storyboard */,
@@ -222,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D750024E209C0255005E823D /* LaunchScreen.storyboard in Resources */,
+				D7D2B5EA2109BC5C0060548E /* ViewController2.xib in Resources */,
 				D750024B209C0255005E823D /* Assets.xcassets in Resources */,
 				D7500249209C0255005E823D /* Main.storyboard in Resources */,
 			);
@@ -242,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7500246209C0255005E823D /* ViewController.m in Sources */,
+				D7D2B5E92109BC5C0060548E /* ViewController2.m in Sources */,
 				D7500251209C0255005E823D /* main.m in Sources */,
 				D7500243209C0255005E823D /* AppDelegate.m in Sources */,
 			);

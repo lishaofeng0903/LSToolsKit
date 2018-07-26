@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController2">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gs-HA-Dbz">
+                    <rect key="frame" x="0.0" y="100" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5Oa-M3-PTU"/>
+                    </constraints>
+                    <state key="normal" title="开始"/>
+                    <connections>
+                        <action selector="begin:" destination="-1" eventType="touchUpInside" id="KbV-gd-pVd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVf-ks-3Ft">
+                    <rect key="frame" x="0.0" y="170" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="vPF-dH-HEb"/>
+                    </constraints>
+                    <state key="normal" title="停止"/>
+                    <connections>
+                        <action selector="stop:" destination="-1" eventType="touchUpInside" id="wID-sx-Fey"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-CF-bL5">
+                    <rect key="frame" x="0.0" y="240" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5z3-mo-koU"/>
+                    </constraints>
+                    <state key="normal" title="带参数停止"/>
+                    <connections>
+                        <action selector="stopWithParam:" destination="-1" eventType="touchUpInside" id="nf1-fy-SH3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nVf-ks-3Ft" firstAttribute="top" secondItem="0Gs-HA-Dbz" secondAttribute="bottom" constant="10" id="1dP-Kl-9Ty"/>
+                <constraint firstItem="nVf-ks-3Ft" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8m6-vr-kl7"/>
+                <constraint firstItem="YiC-CF-bL5" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Nh2-1e-Be3"/>
+                <constraint firstItem="0Gs-HA-Dbz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SCc-IA-53n"/>
+                <constraint firstAttribute="trailing" secondItem="nVf-ks-3Ft" secondAttribute="trailing" id="Saa-kb-aHy"/>
+                <constraint firstItem="0Gs-HA-Dbz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="UvL-Zv-8ur"/>
+                <constraint firstItem="YiC-CF-bL5" firstAttribute="top" secondItem="nVf-ks-3Ft" secondAttribute="bottom" constant="10" id="dGo-XW-WiT"/>
+                <constraint firstAttribute="trailing" secondItem="0Gs-HA-Dbz" secondAttribute="trailing" id="hUM-XV-mUx"/>
+                <constraint firstItem="YiC-CF-bL5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rTv-u8-uO2"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
