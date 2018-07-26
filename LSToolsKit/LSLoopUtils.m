@@ -77,6 +77,7 @@ typedef void(^BreakWithTimeOut)(void);
 - (void)loopMethod{
     if (self.target == nil){
         [self releaseResourse];
+        return;
     }
     NSDate *currentDate = [NSDate date];
     NSComparisonResult result = [currentDate compare:self.timeOutDate];
