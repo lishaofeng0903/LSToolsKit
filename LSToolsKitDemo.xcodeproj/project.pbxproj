@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D74B3EB3216C932A002D5B44 /* LSFormatUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D74B3EB1216C932A002D5B44 /* LSFormatUtils.h */; };
+		D74B3EB3216C932A002D5B44 /* LSFormatUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D74B3EB1216C932A002D5B44 /* LSFormatUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D74B3EB4216C932A002D5B44 /* LSFormatUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D74B3EB2216C932A002D5B44 /* LSFormatUtils.m */; };
+		D74B3EBC216CB82C002D5B44 /* LSToolsKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74B3EBB216CB82C002D5B44 /* LSToolsKitDemoTests.m */; };
+		D74B3EC6216CB972002D5B44 /* LSToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750025C209C028A005E823D /* LSToolsKit.framework */; };
 		D7500243209C0255005E823D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7500242209C0255005E823D /* AppDelegate.m */; };
 		D7500246209C0255005E823D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7500245209C0255005E823D /* ViewController.m */; };
 		D7500249209C0255005E823D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7500247209C0255005E823D /* Main.storyboard */; };
@@ -18,13 +20,29 @@
 		D7500260209C028A005E823D /* LSToolsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D750025E209C028A005E823D /* LSToolsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7500263209C028A005E823D /* LSToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750025C209C028A005E823D /* LSToolsKit.framework */; };
 		D7500264209C028A005E823D /* LSToolsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D750025C209C028A005E823D /* LSToolsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D750026B209C06F7005E823D /* LSLoopUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D7500269209C06F7005E823D /* LSLoopUtils.h */; };
+		D750026B209C06F7005E823D /* LSLoopUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D7500269209C06F7005E823D /* LSLoopUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D750026C209C06F7005E823D /* LSLoopUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D750026A209C06F7005E823D /* LSLoopUtils.m */; };
+		D781D865216DCD7300E3B7CB /* LSCalcUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D781D863216DCD7300E3B7CB /* LSCalcUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D781D866216DCD7300E3B7CB /* LSCalcUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D781D864216DCD7300E3B7CB /* LSCalcUtils.m */; };
 		D7D2B5E92109BC5C0060548E /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2B5E72109BC5C0060548E /* ViewController2.m */; };
 		D7D2B5EA2109BC5C0060548E /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D2B5E82109BC5C0060548E /* ViewController2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D74B3EBE216CB82C002D5B44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7500236209C0255005E823D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D750023D209C0255005E823D;
+			remoteInfo = LSToolsKitDemo;
+		};
+		D74B3EC3216CB96D002D5B44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7500236209C0255005E823D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D750025B209C028A005E823D;
+			remoteInfo = LSToolsKit;
+		};
 		D7500261209C028A005E823D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D7500236209C0255005E823D /* Project object */;
@@ -51,6 +69,9 @@
 /* Begin PBXFileReference section */
 		D74B3EB1216C932A002D5B44 /* LSFormatUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSFormatUtils.h; sourceTree = "<group>"; };
 		D74B3EB2216C932A002D5B44 /* LSFormatUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSFormatUtils.m; sourceTree = "<group>"; };
+		D74B3EB9216CB82C002D5B44 /* LSToolsKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSToolsKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74B3EBB216CB82C002D5B44 /* LSToolsKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSToolsKitDemoTests.m; sourceTree = "<group>"; };
+		D74B3EBD216CB82C002D5B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D750023E209C0255005E823D /* LSToolsKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSToolsKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7500241209C0255005E823D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7500242209C0255005E823D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,12 +87,22 @@
 		D750025F209C028A005E823D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7500269209C06F7005E823D /* LSLoopUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLoopUtils.h; sourceTree = "<group>"; };
 		D750026A209C06F7005E823D /* LSLoopUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLoopUtils.m; sourceTree = "<group>"; };
+		D781D863216DCD7300E3B7CB /* LSCalcUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCalcUtils.h; sourceTree = "<group>"; };
+		D781D864216DCD7300E3B7CB /* LSCalcUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCalcUtils.m; sourceTree = "<group>"; };
 		D7D2B5E62109BC5C0060548E /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		D7D2B5E72109BC5C0060548E /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		D7D2B5E82109BC5C0060548E /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D74B3EB6216CB82C002D5B44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74B3EC6216CB972002D5B44 /* LSToolsKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D750023B209C0255005E823D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,12 +121,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D74B3EBA216CB82C002D5B44 /* LSToolsKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D74B3EBB216CB82C002D5B44 /* LSToolsKitDemoTests.m */,
+				D74B3EBD216CB82C002D5B44 /* Info.plist */,
+			);
+			path = LSToolsKitDemoTests;
+			sourceTree = "<group>";
+		};
+		D74B3EC5216CB972002D5B44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7500235209C0255005E823D = {
 			isa = PBXGroup;
 			children = (
 				D7500240209C0255005E823D /* LSToolsKitDemo */,
 				D750025D209C028A005E823D /* LSToolsKit */,
+				D74B3EBA216CB82C002D5B44 /* LSToolsKitDemoTests */,
 				D750023F209C0255005E823D /* Products */,
+				D74B3EC5216CB972002D5B44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +153,7 @@
 			children = (
 				D750023E209C0255005E823D /* LSToolsKitDemo.app */,
 				D750025C209C028A005E823D /* LSToolsKit.framework */,
+				D74B3EB9216CB82C002D5B44 /* LSToolsKitDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +186,8 @@
 				D750026A209C06F7005E823D /* LSLoopUtils.m */,
 				D74B3EB1216C932A002D5B44 /* LSFormatUtils.h */,
 				D74B3EB2216C932A002D5B44 /* LSFormatUtils.m */,
+				D781D863216DCD7300E3B7CB /* LSCalcUtils.h */,
+				D781D864216DCD7300E3B7CB /* LSCalcUtils.m */,
 			);
 			path = LSToolsKit;
 			sourceTree = "<group>";
@@ -149,6 +201,7 @@
 			files = (
 				D74B3EB3216C932A002D5B44 /* LSFormatUtils.h in Headers */,
 				D750026B209C06F7005E823D /* LSLoopUtils.h in Headers */,
+				D781D865216DCD7300E3B7CB /* LSCalcUtils.h in Headers */,
 				D7500260209C028A005E823D /* LSToolsKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +209,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D74B3EB8216CB82C002D5B44 /* LSToolsKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D74B3EC0216CB82C002D5B44 /* Build configuration list for PBXNativeTarget "LSToolsKitDemoTests" */;
+			buildPhases = (
+				D74B3EB5216CB82C002D5B44 /* Sources */,
+				D74B3EB6216CB82C002D5B44 /* Frameworks */,
+				D74B3EB7216CB82C002D5B44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D74B3EC4216CB96D002D5B44 /* PBXTargetDependency */,
+				D74B3EBF216CB82C002D5B44 /* PBXTargetDependency */,
+			);
+			name = LSToolsKitDemoTests;
+			productName = LSToolsKitDemoTests;
+			productReference = D74B3EB9216CB82C002D5B44 /* LSToolsKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D750023D209C0255005E823D /* LSToolsKitDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7500254209C0255005E823D /* Build configuration list for PBXNativeTarget "LSToolsKitDemo" */;
@@ -202,6 +274,11 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = dev;
 				TargetAttributes = {
+					D74B3EB8216CB82C002D5B44 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D750023D209C0255005E823D;
+					};
 					D750023D209C0255005E823D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -227,11 +304,19 @@
 			targets = (
 				D750023D209C0255005E823D /* LSToolsKitDemo */,
 				D750025B209C028A005E823D /* LSToolsKit */,
+				D74B3EB8216CB82C002D5B44 /* LSToolsKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D74B3EB7216CB82C002D5B44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D750023C209C0255005E823D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +338,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D74B3EB5216CB82C002D5B44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74B3EBC216CB82C002D5B44 /* LSToolsKitDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D750023A209C0255005E823D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,12 +363,23 @@
 			files = (
 				D750026C209C06F7005E823D /* LSLoopUtils.m in Sources */,
 				D74B3EB4216C932A002D5B44 /* LSFormatUtils.m in Sources */,
+				D781D866216DCD7300E3B7CB /* LSCalcUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D74B3EBF216CB82C002D5B44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D750023D209C0255005E823D /* LSToolsKitDemo */;
+			targetProxy = D74B3EBE216CB82C002D5B44 /* PBXContainerItemProxy */;
+		};
+		D74B3EC4216CB96D002D5B44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D750025B209C028A005E823D /* LSToolsKit */;
+			targetProxy = D74B3EC3216CB96D002D5B44 /* PBXContainerItemProxy */;
+		};
 		D7500262209C028A005E823D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D750025B209C028A005E823D /* LSToolsKit */;
@@ -303,6 +407,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D74B3EC1216CB82C002D5B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BRR23J3QT;
+				INFOPLIST_FILE = LSToolsKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lsf.LSToolsKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSToolsKitDemo.app/LSToolsKitDemo";
+			};
+			name = Debug;
+		};
+		D74B3EC2216CB82C002D5B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BRR23J3QT;
+				INFOPLIST_FILE = LSToolsKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lsf.LSToolsKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSToolsKitDemo.app/LSToolsKitDemo";
+			};
+			name = Release;
+		};
 		D7500252209C0255005E823D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D74B3EC0216CB82C002D5B44 /* Build configuration list for PBXNativeTarget "LSToolsKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74B3EC1216CB82C002D5B44 /* Debug */,
+				D74B3EC2216CB82C002D5B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D7500239209C0255005E823D /* Build configuration list for PBXProject "LSToolsKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

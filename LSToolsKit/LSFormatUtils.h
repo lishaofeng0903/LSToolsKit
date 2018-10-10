@@ -16,14 +16,45 @@
 
 @end
 
+#pragma mark - 数字格式化分类
+@interface LSFormatUtils (LSNumberFormatCategory)
+#pragma mark 格式化
+/**
+ 格式化数字：###,###,###,###,###,##(不含小数点)
+ 
+ @param num 需要格式化的数字
+ @return 格式化后的字符串
+ */
++ (NSString *)formatNumber:(NSNumber *)num;
+
+/**
+ 格式化数字：###,###,###,###,###,##
+ 
+ @param num 需要格式化的数字
+ @param decimal 小数位数
+ @return 格式化后的字符串
+ */
++ (NSString *)formatNumber:(NSNumber *)num decimal:(int)decimal;
+
+#pragma mark 反格式化
+/**
+ 反格式化数量
+ 
+ @param numStr 数字字符串
+ @return 返回number
+ */
++ (NSNumber *)unFormatNumberStringToNumber:(NSString *)numStr;
+
+@end
 
 
+#pragma mark - 日期格式化分类
 /**
  时间格式化分类
  */
 @interface LSFormatUtils (LSDateFormatCategory)
 
-#pragma mark - 日期转字符串
+#pragma mark 日期转字符串
 /**
  格式化 日期：yyyy-MM-dd HH:mm:ss
 
@@ -65,7 +96,7 @@
  */
 + (NSString *)formatDateToString:(NSDate *)date dateFormatString:(NSString *)dateFormatStr;
 
-#pragma mark - 字符串转日期
+#pragma mark 字符串转日期
 /**
  将字符串格式化为日期：原格式yyyy-MM-dd HH:mm:ss
 
