@@ -14,7 +14,7 @@
 
 @interface LSCalcUtils : NSObject
 
-///小数位数，只影响加减乘除
+///小数位数，影响对象方法
 @property (nonatomic, assign) short scale;
 
 #pragma mark - 加减乘除
