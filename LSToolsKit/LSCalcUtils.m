@@ -71,7 +71,13 @@
 - (NSDecimalNumber *)divide:(NSDecimalNumber *)num1 num:(NSDecimalNumber *)num2{
     NSDecimalNumber *ls_num1 = [LSCalcUtils typeConversion:num1];
     NSDecimalNumber *ls_num2 = [LSCalcUtils typeConversion:num2];
-    return [ls_num1 decimalNumberByDividingBy:ls_num2 withBehavior:self.numHandler];
+    NSDecimalNumber *result = [NSDecimalNumber zero];
+    @try{
+        result = [ls_num1 decimalNumberByDividingBy:ls_num2 withBehavior:self.numHandler];
+    }@catch(NSException *e){
+        NSLog(@"%@",e);
+    }
+    return result;
 }
 
 #pragma mark - 绝对值
@@ -192,10 +198,6 @@
             num = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@", obj]];
         }
     }
-//    if ([self isNaN:num]){
-//        num = [NSDecimalNumber zero];
-//    }
-    
     return num;
 }
 

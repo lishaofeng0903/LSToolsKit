@@ -37,8 +37,8 @@
 - (void)testCalc{
     NSLog(@"------testCalc-----\n");
     LSCalcUtils *calc = [[LSCalcUtils alloc] init];
-    NSDecimalNumber *dec = [calc add:[NSDecimalNumber decimalNumberWithString:@"1.8888"] num:[NSDecimalNumber one]];
-    NSLog(@"%@",dec.stringValue);
+    [calc divide:[NSDecimalNumber one] num:[NSDecimalNumber zero]];
+//    NSLog(@"%@",dec.stringValue);
 //    BOOL b = [LSCalcUtils isNaN:[NSDecimalNumber notANumber]];
 //    NSAssert(b == YES, @"aa");
     
